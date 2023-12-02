@@ -1,5 +1,4 @@
 import Modal from "../shared/modal";
-import { signIn } from "next-auth/react";
 import { useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 
@@ -36,7 +35,6 @@ const SignInModal = ({ showSignInModal, setShowSignInModal }) => {
             } flex h-10 w-full items-center justify-center space-x-3 rounded-md border text-sm shadow-sm transition-all duration-75 focus:outline-none`}
             onClick={() => {
               setSignInClicked(true);
-              signIn("google");
             }}
           >
             {signInClicked ? <p>Loading</p> : <p>Sign In with Google</p>}

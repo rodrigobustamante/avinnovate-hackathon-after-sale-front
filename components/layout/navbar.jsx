@@ -5,16 +5,14 @@ import Link from "next/link";
 import { useScroll } from "../../lib/hooks/use-scroll";
 import { useSignInModal } from "./sign-in-modal";
 import {
-  useAuth,
   SignedIn,
   SignedOut,
   SignInButton,
   UserButton,
 } from "@clerk/nextjs";
 
-export default function NavBar({ session }) {
-  const { getToken, isLoaded, isSignedIn } = useAuth();
-  const { SignInModal, setShowSignInModal } = useSignInModal();
+export default function NavBar() {
+  const { SignInModal } = useSignInModal();
   const scrolled = useScroll(50);
 
   return (
