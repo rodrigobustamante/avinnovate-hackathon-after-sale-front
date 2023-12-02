@@ -1,8 +1,13 @@
 "use client";
 
-import { useScroll } from "../../lib/hooks/use-scroll";
-import { useSignInModal } from "./sign-in-modal";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { useEffect } from "react";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  useAuth,
+  UserButton,
+} from "@clerk/nextjs";
 import {
   Navbar,
   NavbarBrand,
@@ -11,12 +16,20 @@ import {
   Link,
 } from "@nextui-org/react";
 
+import { loadOneSignal } from '../../services';
+
 export default function NavBar() {
-  const { SignInModal } = useSignInModal();
+  const { isLoaded, isSignedIn, userId } = useAuth();
+
+  useEffect(() => {
+    if (isSignedIn && userId && !window.OneSignal) {
+      console.log({userId});
+      loadOneSignal(userId);
+    }
+  }, [isLoaded]);
 
   return (
     <>
-      <SignInModal />
       <Navbar>
         <NavbarBrand>
           <p className="font-bold text-inherit">ACME</p>
