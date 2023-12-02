@@ -23,7 +23,6 @@ export default function NavBar() {
 
   useEffect(() => {
     if (isSignedIn && userId && !window.OneSignal) {
-      console.log({userId});
       loadOneSignal(userId);
     }
   }, [isLoaded]);
