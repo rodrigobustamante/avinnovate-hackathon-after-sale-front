@@ -6,6 +6,7 @@ import { sfPro, inter } from "./fonts";
 import Nav from "../components/layout/nav";
 import Footer from "../components/layout/footer";
 import { Suspense } from "react";
+import UIProvider from "../components/layout/UIProvider";
 
 export const metadata = {
   title: "Avinnovate Hackathon",
@@ -30,16 +31,45 @@ export default async function RootLayout({ children }) {
         <meta name="theme-color" content="#000000" />
 
         <link rel="apple-touch-icon" href="/icons/touch-icon-iphone.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/icons/touch-icon-ipad.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/touch-icon-iphone-retina.png" />
-        <link rel="apple-touch-icon" sizes="167x167" href="/icons/touch-icon-ipad-retina.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/icons/touch-icon-ipad.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/icons/touch-icon-iphone-retina.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="167x167"
+          href="/icons/touch-icon-ipad-retina.png"
+        />
 
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/icons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/icons/favicon-16x16.png"
+        />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
+        <link
+          rel="mask-icon"
+          href="/icons/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+        />
       </head>
       <ClerkProvider>
         <body className={cx(sfPro.variable, inter.variable)}>
@@ -48,7 +78,7 @@ export default async function RootLayout({ children }) {
             <Nav />
           </Suspense>
           <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
-            {children}
+            <UIProvider>{children}</UIProvider>
           </main>
           <Footer />
           <Analytics />
