@@ -20,9 +20,9 @@ const loadOneSignal = async (userId) => {
     serviceWorkerUpdaterPath: 'OneSignalSDKUpdaterWorker.js',
     promptOptions: {
       actionMessage: 'We want to inform you about an exciting opportunity to stay informed about all our events and activities. To receive notifications and not miss any updates, simply click on the "Accept" button below!',
-      acceptButton: t('Accept', { output: 'string' }),
-      acceptButtonText: t('Accept', { output: 'string' }),
-      cancelButtonText: t('Cancel', { output: 'string' })
+      acceptButton: 'Accept',
+      acceptButtonText: 'Accept',
+      cancelButtonText: 'Cancel',
     },
     welcomeNotification: {
       disable: true
