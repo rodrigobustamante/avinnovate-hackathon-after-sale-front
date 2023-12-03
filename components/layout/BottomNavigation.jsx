@@ -6,16 +6,18 @@ import { useTheme } from "next-themes";
 
 const BottomNavigation = () => {
   const pathname = usePathname();
-  const { theme } = useTheme();
   return (
-    <div className="fixed bottom-0 left-0 z-50 h-16 w-full border-t border-gray-200 bg-white  lg:hidden ">
+    <div
+      className={clsx(
+        "fixed bottom-0 left-0 z-50 h-16 w-full border-t border-gray-200 bg-white dark:bg-slate-900 lg:hidden",
+      )}
+    >
       <div className="mx-auto grid h-full max-w-lg grid-cols-3 font-medium">
         <Link
           href="/"
           className={clsx(
-            "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300",
-            { "bg-purple-300": pathname === "/" && theme === "light" },
-            { "bg-purple-500": pathname === "/" && theme === "dark" },
+            "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300 dark:hover:bg-purple-600",
+            { "bg-purple-300 dark:bg-purple-600": pathname === "/" },
           )}
         >
           <svg
@@ -33,16 +35,15 @@ const BottomNavigation = () => {
             ></path>
           </svg>
 
-          <span className="hidden text-sm text-gray-500 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-500 sm:block">
+          <span className="hidden text-sm text-gray-500  dark:text-gray-200  sm:block">
             Home
           </span>
         </Link>
         <Link
           href="/events"
           className={clsx(
-            "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300 dark:hover:bg-gray-800",
-            { "bg-purple-300": pathname === "/events" && theme === "light" },
-            { "bg-purple-500": pathname === "/events" && theme === "dark" },
+            "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300  dark:hover:bg-purple-600",
+            { "bg-purple-300 dark:bg-purple-600": pathname === "/events" },
           )}
         >
           <svg
@@ -60,21 +61,16 @@ const BottomNavigation = () => {
             />
           </svg>
 
-          <span className="hidden text-sm text-gray-500 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-500 sm:block">
+          <span className="hidden text-sm text-gray-500  dark:text-gray-200  sm:block">
             Events
           </span>
         </Link>
         <Link
           href="/notifications"
           className={clsx(
-            "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300 dark:hover:bg-gray-800",
+            "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300  dark:hover:bg-purple-600",
             {
-              "bg-purple-300":
-                pathname === "/notifications" && theme === "light",
-            },
-            {
-              "bg-purple-500":
-                pathname === "/notifications" && theme === "dark",
+              "bg-purple-300 dark:bg-purple-600": pathname === "/notifications",
             },
           )}
         >
@@ -93,7 +89,7 @@ const BottomNavigation = () => {
             ></path>
           </svg>
 
-          <span className="hidden text-sm text-gray-500 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-500 sm:block">
+          <span className="hidden text-sm text-gray-500  dark:text-gray-200  sm:block">
             Notifications
           </span>
         </Link>
