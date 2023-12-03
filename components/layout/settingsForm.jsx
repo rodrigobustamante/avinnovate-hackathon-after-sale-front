@@ -28,7 +28,7 @@ export const SettingsForm = () => {
         <label className="text-small font-semibold">LANGUAGE</label>
         <Spacer y={3} />
         <Select
-          placeholder="Select an languaje"
+          placeholder="Select a language"
           labelPlacement="outside"
           className="max-w-xs"
           disableSelectorIconRotation
