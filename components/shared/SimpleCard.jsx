@@ -6,15 +6,7 @@ import {
   Image,
 } from "@nextui-org/react";
 
-export default function SimpleCard({
-  keyIndex,
-  title,
-  subTitle,
-  srcImg,
-  cardType = "small",
-}) {
-  return (
-    // Example
+   // Example
     // <SimpleCard
     //   keyIndex="1"
     //   title="Taylor Swift"
@@ -23,6 +15,14 @@ export default function SimpleCard({
     //   cardType="large" o "small" (small por defecto)
     // />
 
+export const SimpleCard = ({
+  keyIndex,
+  title,
+  subTitle,
+  srcImg,
+  cardType = "small",
+}) => {
+  return (
     <Card
       shadow="sm"
       key={keyIndex}
@@ -62,5 +62,6 @@ export default function SimpleCard({
         </>
       )}
     </Card>
-  );
+  )
 }
+

@@ -1,18 +1,20 @@
-import { CardEvent } from "../components/events/CardEvent";
-import { CustomTooltip } from "../components/shared/CustomTooltip";
 import { Title } from "../components/shared/Title";
+import { ContainerBox } from "../components/shared/ContainerBox";
+import { SimpleCard } from "../components/shared/SimpleCard";
 
 export default function Home() {
   return (
-    <section>
-      
-     <Title name={'home'}/>
-      <section className="flex flex-col gap-x-5 px-5 md:flex-row md:flex-wrap md:justify-center	">
-        <CardEvent />
-        <CardEvent />
-        <CardEvent />
-        <CardEvent />
-      </section>
-    </section>
+    <>
+      <Title name={'Welcome again, User!'} />
+      <ContainerBox>
+        <SimpleCard
+          keyIndex="1"
+          title="Taylor Swift"
+          subTitle="Stream the TS event"
+          srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          cardType="large"
+        />
+      </ContainerBox>
+    </>
   );
 }
