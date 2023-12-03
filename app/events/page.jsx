@@ -1,10 +1,9 @@
 import React from "react";
+import { Title } from "../../components/shared/Title";
 
 const Events = () => {
   return (
-    <section>
-      <h1>Events</h1>
-    </section>
+      <Title name={'events'}/>
   );
 };
 

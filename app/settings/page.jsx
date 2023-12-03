@@ -1,10 +1,9 @@
 import React from "react";
+import { Title } from "../../components/shared/Title";
 
 const Settings = () => {
   return (
-    <section>
-      <h1>Settings</h1>
-    </section>
+    <Title name={'settings'}/>
   );
 };
 
