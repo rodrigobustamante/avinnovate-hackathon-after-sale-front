@@ -14,7 +14,7 @@ const Events = () => {
         css="flex flex-col items-center gap-x-5 md:flex-row md:flex-wrap"
         px="px-0"
       >
-        <CardEvent />
+        <CardEvent name={'The Eras Tour'} image={'/images/taylor-placeholder.png'} description={'Immerse yourself in a night of unforgettable music and dynamic stage presence that defines the essence of a Taylor Swift live performance.'} />
         <CardEvent />
       </ContainerBox>
     </div>
