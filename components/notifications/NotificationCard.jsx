@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Card, CardBody } from "@nextui-org/react";
-import { Modal } from "../home/Modal";
+import { Modal } from "../shared/Modal";
 
 const NotificationCard = ({ title, text, isOpen }) => {
   const [modalState, setModalState] = useState(false);
