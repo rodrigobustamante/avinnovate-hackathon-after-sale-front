@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section>
       
-     <CustomTooltip text={'hola tooltip'} placement={'bottom'}><Title name={'home'}/></CustomTooltip>
+     <Title name={'home'}/>
       <section className="flex flex-col gap-x-5 px-5 md:flex-row md:flex-wrap md:justify-center	">
         <CardEvent />
         <CardEvent />
