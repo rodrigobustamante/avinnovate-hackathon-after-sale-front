@@ -2,17 +2,20 @@
 import { Link } from "@nextui-org/react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 
 const BottomNavigation = () => {
   const pathname = usePathname();
+  const { theme } = useTheme();
   return (
-    <div className="fixed bottom-0 left-0 z-50 h-16 w-full border-t border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-700 lg:hidden">
+    <div className="fixed bottom-0 left-0 z-50 h-16 w-full border-t border-gray-200  lg:hidden">
       <div className="mx-auto grid h-full max-w-lg grid-cols-3 font-medium">
         <Link
           href="/"
           className={clsx(
-            "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300 dark:hover:bg-gray-800",
-            { "bg-purple-300": pathname === "/" },
+            "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300",
+            { "bg-purple-300": pathname === "/" && theme === "light" },
+            { "bg-purple-500": pathname === "/" && theme === "dark" },
           )}
         >
           <svg
@@ -38,7 +41,8 @@ const BottomNavigation = () => {
           href="/events"
           className={clsx(
             "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300 dark:hover:bg-gray-800",
-            { "bg-purple-300": pathname === "/events" },
+            { "bg-purple-300": pathname === "/events" && theme === "light" },
+            { "bg-purple-500": pathname === "/events" && theme === "dark" },
           )}
         >
           <svg
@@ -64,7 +68,14 @@ const BottomNavigation = () => {
           href="/notifications"
           className={clsx(
             "group inline-flex flex-col items-center justify-center px-5 text-inherit hover:bg-purple-300 dark:hover:bg-gray-800",
-            { "bg-purple-300": pathname === "/notifications" },
+            {
+              "bg-purple-300":
+                pathname === "/notifications" && theme === "light",
+            },
+            {
+              "bg-purple-500":
+                pathname === "/notifications" && theme === "dark",
+            },
           )}
         >
           <svg
