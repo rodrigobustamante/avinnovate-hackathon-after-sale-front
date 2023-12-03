@@ -6,7 +6,7 @@ const Notifications = () => {
   return (
     <>
       <Title name={"notifications"} />
-      <ContainerBox>
+      <ContainerBox css={"mb-10 md:mb-0"}>
         <NotificationList />
       </ContainerBox>
     </>
