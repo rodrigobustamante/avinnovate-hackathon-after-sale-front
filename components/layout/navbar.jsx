@@ -16,7 +16,7 @@ import {
   Link,
 } from "@nextui-org/react";
 
-import { loadOneSignal } from '../../services';
+import { loadOneSignal } from "../../services";
 
 export default function NavBar() {
   const { isLoaded, isSignedIn, userId } = useAuth();
@@ -31,21 +31,23 @@ export default function NavBar() {
     <>
       <Navbar>
         <NavbarBrand>
-          <p className="font-bold text-inherit">ACME</p>
+          <Link color="foreground" href="/">
+            <p className="font-bold text-inherit">ACME</p>
+          </Link>
         </NavbarBrand>
         <NavbarContent className="hidden gap-4 lg:flex" justify="center">
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link color="foreground" href="/settings">
               Settings
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
-            <Link href="#" aria-current="page">
+            <Link href="/events" aria-current="page">
               Events
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link color="foreground" href="/notifications">
               Notifications
             </Link>
           </NavbarItem>
