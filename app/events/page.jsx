@@ -6,15 +6,18 @@ import { ContainerBox } from "../../components/shared/ContainerBox";
 
 const Events = () => {
   return (
-    <section>
+    <div className="px-0">
       <Title name={"events"} />
       <h1>Follow a new event</h1>
       <SelectEvent />
-      <ContainerBox css="flex flex-col items-center gap-x-5 px-2 md:flex-row md:flex-wrap">
+      <ContainerBox
+        css="flex flex-col items-center gap-x-5 md:flex-row md:flex-wrap"
+        px="px-0"
+      >
         <CardEvent />
         <CardEvent />
       </ContainerBox>
-    </section>
+    </div>
   );
 };
 
