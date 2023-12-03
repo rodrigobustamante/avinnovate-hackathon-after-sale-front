@@ -5,14 +5,24 @@ export const SettingsForm = () => {
   return (
     <>
       <Spacer y={2} />
-      <div className="flex flex-wrap gap-6 md:flex-nowrap">
-        <label className="text-small font-semibold">COLOR-CONTRAST</label>
+      <div className="flex justify-between ">
+        <div>
+          <label className="text-small font-semibold">COLOR-CONTRAST</label>
+          <p className="text-sm text-slate-500">
+            This switch allows to activate dark mode in the website
+          </p>
+        </div>
+
         <Spacer x={55} />
         <Switch defaultSelected color="success" />
       </div>
+
       <Spacer y={3} />
       <div className="flex w-full max-w-md flex-col">
         <label className="text-small font-semibold">RESIZE TEXT</label>
+        <p className="text-sm text-slate-500">
+          Move across the bar to change the size of the website
+        </p>
         <Spacer y={4} />
         <Slider
           size="sm"
@@ -24,11 +34,12 @@ export const SettingsForm = () => {
           className="max-w-md"
         />
       </div>
+
       <div className="flex w-full max-w-md flex-col">
         <label className="text-small font-semibold">LANGUAGE</label>
         <Spacer y={3} />
         <Select
-          placeholder="Select an languaje"
+          placeholder="Select a language"
           labelPlacement="outside"
           className="max-w-xs"
           disableSelectorIconRotation
@@ -45,7 +56,6 @@ export const SettingsForm = () => {
         </Select>
       </div>
       <Spacer y={3} />
-      <Button color="primary">SAVE CHANGES</Button>
     </>
   );
 };
