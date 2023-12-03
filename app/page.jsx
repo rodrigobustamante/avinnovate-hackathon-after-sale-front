@@ -20,21 +20,21 @@ export default function Home() {
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Lollapaloza 2024"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/lolls.png"
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Metallica tour"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/metallica.jpg"
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Coldplay tour"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/coldplay.jpg"
               />
             </div>
           </section>
@@ -43,27 +43,27 @@ export default function Home() {
             <div id="cards-2" className="flex flex-col items-center gap-x-5 px-2 md:flex-row md:flex-wrap ">
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Taylor's bracelet"
                 subTitle="Stream the TS event"
-                srcImg="/images/taylor-placeholder.png"
+                srcImg="/images/bracelet.png"
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="BlackPink wand"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/blackpinkwnd.png"
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Lollapaloza Official Merch"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/lollamerch.png"
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Film Festival Merch"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/merch.jpg"
               />
             </div>
           </section>
@@ -72,27 +72,27 @@ export default function Home() {
             <div id="cards-3" className="flex flex-col items-center gap-x-5 px-2 md:flex-row md:flex-wrap ">
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Transport"
                 subTitle="Stream the TS event"
-                srcImg="/images/taylor-placeholder.png"
+                srcImg="/images/bus.png"
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Accommodation"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/acomodation.png"
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Rent a bike"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/bike.jpg"
               />
               <SimpleCard
                 keyIndex="1"
-                title="Taylor Swift"
+                title="Bike parking"
                 subTitle="Stream the TS event"
-                srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                srcImg="/images/bike2.jpg"
               />
             </div>
           </section>
