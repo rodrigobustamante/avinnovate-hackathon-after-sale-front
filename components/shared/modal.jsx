@@ -14,6 +14,7 @@ export const Modal = ({
   size = "md",
   modalPlacement = "center",
   description,
+  children,
 }) => {
   return (
     <>
@@ -28,12 +29,18 @@ export const Modal = ({
             <ModalHeader className="flex flex-col gap-1">
               {modalTitle}
             </ModalHeader>
-            <ModalBody>
-              <p>{description}</p>
-              <Button color="primary" onClick={() => setModalState(false)}>
-                OK THANK YOU!
-              </Button>
-            </ModalBody>
+            {children ? (
+              <ModalBody>{children}</ModalBody>
+            ) : (
+              <>
+                <ModalBody>
+                  <p>{description}</p>
+                  <Button color="primary" onClick={() => setModalState(false)}>
+                    OK THANK YOU!
+                  </Button>
+                </ModalBody>
+              </>
+            )}
           </>
         </ModalContent>
       </NextUiModal>
