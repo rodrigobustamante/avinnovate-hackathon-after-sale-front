@@ -6,7 +6,7 @@ import { Greeting } from "../components/home/Greeting"
 export default function Home() {
   return (
     <>
-      <ContainerBox css={'flex justify-center'}>
+      <ContainerBox css={'flex justify-center mb-10 md:mb-0'}>
         <div>
           <Greeting />
           <section id="section-1" >
