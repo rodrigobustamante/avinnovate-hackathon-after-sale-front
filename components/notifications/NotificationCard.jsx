@@ -1,15 +1,15 @@
 "use client";
 import { useState } from "react";
 import { Card, CardBody } from "@nextui-org/react";
-import { Modal } from "../home/Modal";
+import { Modal } from "../shared/Modal";
 
-const NotificationCard = ({ title, text, isOpen }) => {
+export const NotificationCard = ({ title, text, isOpen }) => {
   const [modalState, setModalState] = useState(false);
 
   return (
     <>
       <Card
-        className="w-full"
+        className="w-full my-3"
         isPressable
         onClick={() => setModalState(!modalState)}
       >
@@ -62,6 +62,4 @@ const NotificationCard = ({ title, text, isOpen }) => {
       />
     </>
   );
-};
-
-export default NotificationCard;
+}
