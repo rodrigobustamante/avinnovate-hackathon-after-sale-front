@@ -42,7 +42,7 @@ export const SettingsForm = () => {
       </div>
 
       <div className="flex w-full max-w-md flex-col">
-        <label className="text-small font-semibold">LANGUAGE</label>
+        <label className="text-small font-semibold">CHANGE LANGUAGE - Soon 🤭</label>
         <Spacer y={3} />
         <Select
           placeholder="Select a language"
