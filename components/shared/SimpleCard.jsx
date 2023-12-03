@@ -44,7 +44,7 @@ export const SimpleCard = ({
               radius="none"
               width="100%"
               alt={title}
-              className="w-[210px] object-cover"
+              className="w-[210px] h-[140px] object-cover"
               src={srcImg}
             />
           </CardBody>
