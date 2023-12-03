@@ -2,6 +2,7 @@ import Card from "../components/home/card";
 import ComponentGrid from "../components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "../lib/utils";
+import { CardEvent } from "../components/events/CardEvent";
 
 export default async function Home() {
   const { stargazers_count: stars } = await fetch(
@@ -22,7 +23,9 @@ export default async function Home() {
 
   return (
     <>
+
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+
         <a
           href="https://twitter.com/steventey/status/1613928948915920896"
           target="_blank"
@@ -63,6 +66,12 @@ export default async function Home() {
           </a>
         </div>
       </div>
+      <section className="flex gap-x-5 flex-col md:flex-row md:flex-wrap md:justify-center px-2	">
+        <CardEvent />
+        <CardEvent />
+        <CardEvent />
+        <CardEvent />
+      </section>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
