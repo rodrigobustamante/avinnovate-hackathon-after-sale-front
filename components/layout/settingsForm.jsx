@@ -1,5 +1,5 @@
 import { Spacer, Slider, Select, SelectItem, Button } from "@nextui-org/react";
-import { Switch } from "@nextui-org/react";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export const SettingsForm = () => {
   return (
@@ -14,7 +14,7 @@ export const SettingsForm = () => {
         </div>
 
         <Spacer x={55} />
-        <Switch defaultSelected color="success" />
+        <ThemeSwitcher />
       </div>
 
       <Spacer y={3} />
