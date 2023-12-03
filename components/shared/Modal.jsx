@@ -14,6 +14,7 @@ export const Modal = ({
   size = "md",
   modalPlacement = "center",
   description,
+  date,
   children,
 }) => {
   return (
@@ -35,6 +36,7 @@ export const Modal = ({
               <>
                 <ModalBody>
                   <p>{description}</p>
+                  <small>{date}</small>
                   <Button color="primary" onClick={() => setModalState(false)}>
                     OK THANK YOU!
                   </Button>

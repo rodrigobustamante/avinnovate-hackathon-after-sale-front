@@ -76,7 +76,7 @@ export default async function RootLayout({ children }) {
       <ClerkProvider>
         <body className={cx(sfPro.variable, inter.variable)}>
           <UIProvider>
-            <NextThemeProvider attribute="class" defaultTheme="dark">
+            <NextThemeProvider>
               <Suspense fallback="...">
                 <Nav />
               </Suspense>

@@ -3,13 +3,28 @@ import { useState } from "react";
 import { Card, CardBody } from "@nextui-org/react";
 import { Modal } from "../shared/Modal";
 
-export const NotificationCard = ({ title, text, isOpen }) => {
+export const NotificationCard = ({ title, text, date, isOpen }) => {
   const [modalState, setModalState] = useState(false);
+
+  const formattedDate = new Date(date);
+
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    timeZoneName: "short",
+  };
+
+  const dateFormatter = new Intl.DateTimeFormat("en-US", options);
+  const readableDate = dateFormatter.format(formattedDate);
 
   return (
     <>
       <Card
-        className="w-full my-3"
+        className="my-3 w-full"
         isPressable
         onClick={() => setModalState(!modalState)}
       >
@@ -59,7 +74,8 @@ export const NotificationCard = ({ title, text, isOpen }) => {
         setModalState={setModalState}
         modalTitle={title}
         description={text}
+        date={readableDate}
       />
     </>
   );
-}
+};
