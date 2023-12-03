@@ -1,10 +1,9 @@
 import React from "react";
+import { Title } from "../../components/shared/Title";
 
 const Notifications = () => {
   return (
-    <section>
-      <h1>Notifications</h1>
-    </section>
+      <Title name={'notifications'}/>
   );
 };
 
