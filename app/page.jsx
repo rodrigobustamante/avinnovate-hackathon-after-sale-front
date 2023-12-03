@@ -1,11 +1,11 @@
-import { Title } from "../components/shared/Title";
 import { ContainerBox } from "../components/shared/ContainerBox";
 import { SimpleCard } from "../components/shared/SimpleCard";
+import Greeting from "../components/home/Greeting";
 
 export default function Home() {
   return (
     <>
-      <Title name={'Welcome again, User!'} />
+      <Greeting />
       <ContainerBox>
         <SimpleCard
           keyIndex="1"
