@@ -5,8 +5,10 @@ import NotificationList from "../../components/notifications/NotificationList";
 const Notifications = () => {
   return (
     <>
-      <Title name={"notifications"} />
       <ContainerBox css={"mb-10 md:mb-0"}>
+        <div className="mr-3">
+          <Title name={"notifications"} />
+        </div>
         <NotificationList />
       </ContainerBox>
     </>
