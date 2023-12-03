@@ -79,7 +79,7 @@ export default async function RootLayout({ children }) {
               <Nav />
             </Suspense>
             <BottomNavigation />
-            <main className="flex min-h-screen w-full flex-col items-center py-3">
+            <main className="container mx-auto flex min-h-screen flex-col px-4 py-32">
               {children}
             </main>
           </UIProvider>
