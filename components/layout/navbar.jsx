@@ -37,7 +37,7 @@ export default function NavBar() {
       <Navbar className="lg:items-center" isBordered>
         <NavbarBrand>
           <Link color="foreground" href="/">
-            <p className="font-bold text-inherit">ACME</p>
+            <p className="font-bold text-inherit">KAPPA-8</p>
           </Link>
         </NavbarBrand>
         <div className="flex justify-between lg:items-center">
