@@ -1,5 +1,5 @@
 import { Spacer, Slider, Select, SelectItem, Button } from "@nextui-org/react";
-import { CustomSwitch } from "../shared/CustomSwitch";
+import { Switch } from "@nextui-org/react";
 
 export const SettingsForm = () => {
   return (
@@ -8,7 +8,7 @@ export const SettingsForm = () => {
       <div className="flex flex-wrap gap-6 md:flex-nowrap">
         <label className="text-small font-semibold">COLOR-CONTRAST</label>
         <Spacer x={55} />
-        <CustomSwitch />
+        <Switch defaultSelected color="success" />
       </div>
       <Spacer y={3} />
       <div className="flex w-full max-w-md flex-col">
