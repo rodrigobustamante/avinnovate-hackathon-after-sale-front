@@ -1,8 +1,15 @@
+import { CardEvent } from "../components/events/CardEvent";
+
 export default function Home() {
   return (
     <section>
       <h1>Home</h1>
-      <div className="my-10 w-full max-w-screen-xl animate-fade-up px-5 xl:px-0"></div>
+      <section className="flex flex-col gap-x-5 px-2 md:flex-row md:flex-wrap md:justify-center	">
+        <CardEvent />
+        <CardEvent />
+        <CardEvent />
+        <CardEvent />
+      </section>
     </section>
   );
 }
