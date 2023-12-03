@@ -37,7 +37,7 @@ export const Modal = ({
                 <ModalBody>
                   <p>{description}</p>
                   <small>{date}</small>
-                  <Button color="primary" onClick={() => setModalState(false)}>
+                  <Button color="secondary" onClick={() => setModalState(false)}>
                     OK THANK YOU!
                   </Button>
                 </ModalBody>

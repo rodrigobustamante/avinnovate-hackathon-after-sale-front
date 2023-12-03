@@ -8,7 +8,7 @@ const Events = () => {
   return (
     <div className="px-0">
       <Title name={"events"} />
-      <h1>Follow a new event</h1>
+      <h1 className="mb-3 text-slate-700	">Follow a new event</h1>
       <SelectEvent />
       <ContainerBox
         css="flex flex-col items-center gap-x-2 md:flex-row md:flex-wrap mb-10 md:mb-0"
