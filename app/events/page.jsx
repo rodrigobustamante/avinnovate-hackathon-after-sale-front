@@ -11,7 +11,7 @@ const Events = () => {
       <h1>Follow a new event</h1>
       <SelectEvent />
       <ContainerBox
-        css="flex flex-col items-center gap-x-2 md:flex-row md:flex-wrap"
+        css="flex flex-col items-center gap-x-2 md:flex-row md:flex-wrap mb-10 md:mb-0"
         px="px-0"
       >
         <CardEvent name={'The Eras Tour'} image={'/images/taylor-placeholder.png'} description={'A night of unforgettable music and dynamic stage presence that defines the essence of a Taylor Swift live performance.'} date={'June 5th 2023'}/>
