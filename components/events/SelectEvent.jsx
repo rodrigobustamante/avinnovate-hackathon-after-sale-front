@@ -13,7 +13,7 @@ async function getData() {
   return res.json();
 }
 
-const SelectEvent = async ({ handleAddEvent }) => {
+const SelectEvent = async () => {
   const { events } = await getData();
 
   return <SelectEventWrapper events={events} />;
