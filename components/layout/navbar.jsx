@@ -22,6 +22,7 @@ import { Modal } from "../shared/Modal";
 import { SettingsForm } from "./settingsForm";
 import { loadOneSignal } from "../../services";
 import { CustomTooltip } from "../../components/shared/CustomTooltip"
+import Image from "next/image";
 
 export default function NavBar() {
   const [settingsModalState, setSettingsModalState] = useState(false);
@@ -40,7 +41,11 @@ export default function NavBar() {
         <NavbarBrand>
           <Link color="foreground" href="/">
             <CustomTooltip text="Go Home" placement={'bottom'}>
-              <p className="font-bold text-inherit">KAPPA-8</p>
+              <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+                <Image src="/logo.png" alt="me" width="30" height="30" />
+                <p className="font-bold text-inherit">KAPPA-8</p>
+              </div>
+              {/* <img src="logo.png" alt="Audienceview Logo" /> */}
             </CustomTooltip>
           </Link>
         </NavbarBrand>
