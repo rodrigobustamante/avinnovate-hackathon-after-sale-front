@@ -8,7 +8,9 @@ export default function Home() {
     <>
       <ContainerBox css={'flex justify-center mb-10 md:mb-0'}>
         <div>
-          <Greeting />
+          <div className={'ml-3'}>
+            <Greeting />
+          </div>
           <section id="section-1" >
             <Subtitle name={'Upcoming events 😎'} />
             <div id="cards-1" className="flex flex-col items-center gap-x-5 px-2 md:flex-row md:flex-wrap ">
