@@ -2,6 +2,11 @@ import { Spacer, Slider, Select, SelectItem, Button } from "@nextui-org/react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export const SettingsForm = () => {
+  const sliderChange = (e) => {
+    const root = document.querySelector(":root");
+    root.style.fontSize = `${e}px`;
+  };
+
   return (
     <>
       <Spacer y={2} />
@@ -26,12 +31,13 @@ export const SettingsForm = () => {
         <Spacer y={4} />
         <Slider
           size="sm"
-          step={0.01}
-          maxValue={1}
-          minValue={0}
-          aria-label="Temperature"
-          defaultValue={0.2}
+          step={0.1}
+          showTooltip={true}
+          maxValue={30}
+          minValue={16}
+          defaultValue={16}
           className="max-w-md"
+          onChange={(e) => sliderChange(e)}
         />
       </div>
 
