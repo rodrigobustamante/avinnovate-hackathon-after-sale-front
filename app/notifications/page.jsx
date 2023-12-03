@@ -5,8 +5,8 @@ import { NotificationCard } from "../../components/notifications/NotificationCar
 const Notifications = () => {
   return (
     <>
-      <Title name={'notifications'} />
       <ContainerBox>
+      <Title name={'notifications'} />
         <NotificationCard title={'THE ERAS TOUR: TAYLOR SWIFT'} isOpen={true} text={'It’s hot outside 😎 here you have...'} />
         <NotificationCard title={'THE ERAS TOUR: TAYLOR SWIFT'} isOpen={true} text={'It’s hot outside 😎 here you have...'} />
         <NotificationCard title={'THE ERAS TOUR: TAYLOR SWIFT'} isOpen={true} text={'It’s hot outside 😎 here you have...'} />
