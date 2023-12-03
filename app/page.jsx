@@ -10,9 +10,9 @@ export default function Home() {
     <>
       <Title name={'Welcome again, User!'} />
       <ContainerBox>
-        <section >
+        <section id="section-1" >
           <Subtitle name={'Upcoming events 😎'} />
-          <div id="cards-1" className="flex flex-col items-center gap-x-5 px-2 md:flex-row md:flex-wrap">
+          <div id="cards-1" className="flex flex-col items-center gap-x-5 px-2 md:flex-row md:flex-wrap ">
             <SimpleCard
               keyIndex="1"
               title="Taylor Swift"
@@ -38,14 +38,12 @@ export default function Home() {
               srcImg="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
           </div>
-
         </section>
-
-        <section>
+        <section id="section-2">
           <Subtitle name={'Merch you would love 💖'} />
 
         </section>
-        <section>
+        <section id="section-3">
           <Subtitle name={'Maybe you need ... 🤔'} />
 
         </section>

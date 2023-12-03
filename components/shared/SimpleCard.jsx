@@ -28,7 +28,7 @@ export const SimpleCard = ({
       shadow="sm"
       key={keyIndex}
       isPressable
-      className={cardType !== "small" && "col-span-12 w-[200px] sm:col-span-4"}
+      className={cardType !== "small " && "col-span-12 w-[200px] sm:col-span-4 my-2"}
     >
       {cardType !== "small" && (
         <CardHeader className="absolute top-1 z-10 flex-col !items-start">
