@@ -8,6 +8,7 @@ import {
   useAuth,
   UserButton,
 } from "@clerk/nextjs";
+import { usePathname } from "next/navigation";
 import {
   Navbar,
   NavbarBrand,
@@ -20,6 +21,7 @@ import { loadOneSignal } from "../../services";
 
 export default function NavBar() {
   const { isLoaded, isSignedIn, userId } = useAuth();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (isSignedIn && userId && !window.OneSignal) {
@@ -40,17 +42,20 @@ export default function NavBar() {
             className="hidden gap-4 lg:mx-3 lg:flex lg:justify-end"
             justify="end"
           >
-            <NavbarItem>
+            <NavbarItem isActive={pathname === "/settings"}>
               <Link color="foreground" href="/settings">
                 Settings
               </Link>
             </NavbarItem>
-            <NavbarItem isActive>
-              <Link href="/events" aria-current="page">
+            <NavbarItem isActive={pathname === "/events"}>
+              <Link color="foreground" href="/events">
                 Events
               </Link>
             </NavbarItem>
-            <NavbarItem className="flex">
+            <NavbarItem
+              className="flex"
+              isActive={pathname === "/notifications"}
+            >
               <Link color="foreground" href="/notifications">
                 Notifications
                 <div className="mx-1 flex">
