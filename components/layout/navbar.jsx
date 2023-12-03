@@ -21,6 +21,7 @@ import {
 import { Modal } from "../shared/Modal";
 import { SettingsForm } from "./settingsForm";
 import { loadOneSignal } from "../../services";
+import { CustomTooltip} from "../../components/shared/CustomTooltip"
 
 export default function NavBar() {
   const [settingsModalState, setSettingsModalState] = useState(false);
@@ -38,7 +39,10 @@ export default function NavBar() {
       <Navbar className="lg:items-center" isBordered>
         <NavbarBrand>
           <Link color="foreground" href="/">
+            <CustomTooltip text="Go Home" placement={'bottom'}>
             <p className="font-bold text-inherit">KAPPA-8</p>
+            </CustomTooltip>
+            
           </Link>
         </NavbarBrand>
         <div className="flex justify-between lg:items-center">
