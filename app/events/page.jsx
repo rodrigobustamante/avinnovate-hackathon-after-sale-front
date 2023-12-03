@@ -2,6 +2,7 @@ import React from "react";
 import SelectEvent from "../../components/events/SelectEvent";
 import { CardEvent } from "../../components/events/CardEvent";
 import { Title } from "../../components/shared/Title";
+import { ContainerBox } from "../../components/shared/ContainerBox";
 
 const Events = () => {
   return (
@@ -9,10 +10,10 @@ const Events = () => {
       <Title name={"events"} />
       <h1>Follow a new event</h1>
       <SelectEvent />
-      <section className="flex flex-col items-center gap-x-5 px-2 md:flex-row md:flex-wrap">
+      <ContainerBox css="flex flex-col items-center gap-x-5 px-2 md:flex-row md:flex-wrap">
         <CardEvent />
         <CardEvent />
-      </section>
+      </ContainerBox>
     </section>
   );
 };
