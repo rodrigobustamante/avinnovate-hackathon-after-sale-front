@@ -8,6 +8,7 @@ import Footer from "../components/layout/footer";
 import { Suspense } from "react";
 import UIProvider from "../components/layout/UIProvider";
 import BottomNavigation from "../components/layout/BottomNavigation";
+import NextThemeProvider from "../components/layout/NextThemeProvider";
 
 export const metadata = {
   title: "Avinnovate Hackathon",
@@ -75,13 +76,15 @@ export default async function RootLayout({ children }) {
       <ClerkProvider>
         <body className={cx(sfPro.variable, inter.variable)}>
           <UIProvider>
-            <Suspense fallback="...">
-              <Nav />
-            </Suspense>
-            <BottomNavigation />
-            <main className="container mx-auto flex min-h-screen flex-col px-4 py-32">
-              {children}
-            </main>
+            <NextThemeProvider attribute="class" defaultTheme="dark">
+              <Suspense fallback="...">
+                <Nav />
+              </Suspense>
+              <BottomNavigation />
+              <main className="container mx-auto flex min-h-screen flex-col px-4 py-32">
+                {children}
+              </main>
+            </NextThemeProvider>
           </UIProvider>
           <Footer />
           <Analytics />
