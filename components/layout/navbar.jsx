@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   SignedIn,
   SignedOut,
@@ -16,10 +16,12 @@ import {
   NavbarItem,
   Link,
 } from "@nextui-org/react";
-
+import { Modal } from "../shared/Modal";
+import { SettingsForm } from "./settingsForm";
 import { loadOneSignal } from "../../services";
 
 export default function NavBar() {
+  const [settingsModalState, setSettingsModalState] = useState(false);
   const { isLoaded, isSignedIn, userId } = useAuth();
   const pathname = usePathname();
 
@@ -31,7 +33,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar className="lg:items-center">
+      <Navbar className="lg:items-center" isBordered>
         <NavbarBrand>
           <Link color="foreground" href="/">
             <p className="font-bold text-inherit">ACME</p>
@@ -42,8 +44,11 @@ export default function NavBar() {
             className="hidden gap-4 lg:mx-3 lg:flex lg:justify-end"
             justify="end"
           >
-            <NavbarItem isActive={pathname === "/settings"}>
-              <Link color="foreground" href="/settings">
+            <NavbarItem>
+              <Link
+                color="foreground"
+                onClick={() => setSettingsModalState(!settingsModalState)}
+              >
                 Settings
               </Link>
             </NavbarItem>
@@ -90,6 +95,14 @@ export default function NavBar() {
           </NavbarContent>
         </div>
       </Navbar>
+
+      <Modal
+        open={settingsModalState}
+        setModalState={setSettingsModalState}
+        modalTitle="Settings"
+      >
+        <SettingsForm />
+      </Modal>
     </>
   );
 }
